@@ -1,8 +1,9 @@
 <div align="center">
-Blackjack
-A Java desktop card game built to explore object-oriented programming.
+# Blackjack 
+**A Java desktop card game built to explore object-oriented programming.**
 Java · Swing / AWT · Java Sound · Single-player
 Quick start · Gameplay · Architecture · Known limitations
+[Tên hiển thị](URL)
 </div>
 ![Blackjack game table with betting chip, balance, score counters, and gameplay controls](OOP-Project-main/images/img_2.png)
 > Screenshot supplied with the project. The current source has known asset and gameplay issues described below.
