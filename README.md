@@ -28,7 +28,6 @@ Play against a computer controlled dealer, place a bet, and build a hand close t
 ---
 
 # Features
-```text
 | | Feature | Implementation |
 |:---:|---|---|
 | 🃏 | Card system | Shuffled 52-card deck and adjustable Ace values |
@@ -37,7 +36,7 @@ Play against a computer controlled dealer, place a bet, and build a hand close t
 | 📊 | Session tracking | Balance and player/dealer win counters |
 | 🔊 | Audio | Background audio and action sound effects |
 | 🖥️ | Desktop interface | Balance entry, main menu, Help, and About Us |
-```
+
 
 ---
 
