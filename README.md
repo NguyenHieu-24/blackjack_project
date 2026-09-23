@@ -83,13 +83,16 @@ Skip `mkdir out` if the folder already exists. Run from main so relative asset p
 
 <details>
 <summary><strong>Troubleshooting</strong></summary>
+
 | Symptom | Check |
 |---|---|
 | `javac` is not recognized | Install a JDK and check its `bin` directory is on your terminal path. |
 | Images are missing | Launch from `blackjack_project` and apply the card image correction above. |
 | Balance entry throws an error | Enter a positive whole number, such as `1000`. |
 | Audio throws an error | Check that the sound files exist and an audio device is available; audio error handling needs improvement. |
+
 **Validation:** Documentation was checked against the supplied source and asset paths. Compilation and interactive gameplay were not verified in the review environment because `javac` was unavailable.
+
 </details>
 
 ---
@@ -102,8 +105,10 @@ Skip `mkdir out` if the folder already exists. Run from main so relative asset p
 | 3 |	Click the betting chip and choose a bet within your balance. |
 | 4 |	Select HIT to draw or STAND when your total is at least 15. |
 | 5 |	Play another round or select EXIT. |
+
 <details>
 <summary><strong>Card values and game rules</strong></summary>
+
 | Rule | Current implementation |
 |---|---|
 | Number cards | Face value |
@@ -116,11 +121,9 @@ Skip `mkdir out` if the folder already exists. Run from main so relative asset p
 | Five cards condition | Checks for five cards totaling 21 or less; see edge-case issue below |
 | Tie | Equal totals or both hands over 21 in the Stand handler |
 | Balance settlement | One bet gained/lost; unchanged on a tie; no special 3:2 payout |
+
 Balances and scores last for the current session only. The opening screen collects a balance and does not provide account authentication.
-</details>
-<details>
-<summary><strong>Screenshot: starting-balance screen</strong></summary>
-![Starting-balance entry screen](images/img.png)
+
 </details>
 
 ---
@@ -135,8 +138,10 @@ Balances and scores last for the current session only. The opening screen collec
 | `GameComponent` | Table rendering, balance display, and bet input |
 | `OptionsComponent` | Menu rendering and menu interactions |
 | `SE` | Audio loading and playback |
+
 <details>
 <summary><strong>Object-oriented concepts demonstrated</strong></summary>
+
 | Concept | Example |
 |---|---|
 | Encapsulation | Private card fields with getters; private deck collection |
@@ -145,7 +150,9 @@ Balances and scores last for the current session only. The opening screen collec
 | Interfaces | UI components implement `MouseListener` |
 | Overriding | Custom painting, mouse handlers, and thread `run()` methods |
 | Singleton-style access | `Tester.getInstance()` returns a shared instance |
+
 Several classes share static state. Further separation of game logic from the UI would improve testability.
+
 </details>
 
 ---
@@ -163,6 +170,7 @@ Several classes share static state. Further separation of game logic from the UI
 **Educational prototype:** apply the image path correction before running. Gameplay edge cases and UI threading also need improvement.
 <details>
 <summary><strong>View source-review findings</strong></summary>
+
 | Area | Finding |
 |---|---|
 | Assets | `Card.java` references a missing card-back filename. |
@@ -175,16 +183,17 @@ Several classes share static state. Further separation of game logic from the UI
 | UI threads | Continuous loops lack a delay; some Swing changes run outside the Event Dispatch Thread. |
 | Resources | Images reload during painting; audio initialization failures can leave a null clip. |
 | Tests | No automated test suite or build-tool configuration is included. |
+
 </details>
 
 ---
 
 # Roadmap
-- [ ] Correct asset references and round-ending edge cases.
-- [ ] Validate balances and bets; enforce one active round.
-- [ ] Separate game rules from Swing components.
-- [ ] Replace busy loops with event-driven updates.
-- [ ] Add scoring and round-resolution tests.
+- Correct asset references and round-ending edge cases.
+- Validate balances and bets; enforce one active round.
+- Separate game rules from Swing components.
+- Replace busy loops with event-driven updates.
+- Add scoring and round-resolution tests.
 
 ---
 
@@ -194,9 +203,11 @@ Several classes share static state. Further separation of game logic from the UI
 | Nguyen Hieu Nguyen | ITDS******* |
 | Xuan Tam Le | ITDS******* |
 | Ngoc Sang Nguyen | ITDS******* |
-Contributing
+
+# Contributing
 Open an issue or submit a focused pull request. Include reproduction steps, Java version, operating system, and how you checked your change.
-License
+
+# License
 The supplied repository has no `LICENSE` file, although its original README mentioned MIT. Maintainers should confirm the license and document image and audio permissions.
 
 ---
