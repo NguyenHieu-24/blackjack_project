@@ -18,7 +18,6 @@
 
 ---
 
-![Blackjack table with balance, win counters, betting chip, and Hit / Stand controls](images/img_2.png)
 <p align="center"><sub>Game table screenshot included in the repository. See known issues for current source limitations.</sub></p>
 
 ---
