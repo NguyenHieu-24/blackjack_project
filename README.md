@@ -83,13 +83,16 @@ Skip `mkdir out` if the folder already exists. Run from main so relative asset p
 
 <details>
 <summary><strong>Troubleshooting</strong></summary>
+
 | Symptom | Check |
 |---|---|
 | `javac` is not recognized | Install a JDK and check its `bin` directory is on your terminal path. |
 | Images are missing | Launch from `blackjack_project` and apply the card image correction above. |
 | Balance entry throws an error | Enter a positive whole number, such as `1000`. |
 | Audio throws an error | Check that the sound files exist and an audio device is available; audio error handling needs improvement. |
+
 **Validation:** Documentation was checked against the supplied source and asset paths. Compilation and interactive gameplay were not verified in the review environment because `javac` was unavailable.
+
 </details>
 
 ---
