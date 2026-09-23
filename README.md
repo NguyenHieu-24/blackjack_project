@@ -15,7 +15,9 @@
   <a href="#architecture">Architecture</a> ·
   <a href="#known-issues">Known Issues</a>
 </p>
+
 ---
+
 ![Blackjack table with balance, win counters, betting chip, and Hit / Stand controls](images/img_2.png)
 <p align="center"><sub>Game table screenshot included in the repository. See known issues for current source limitations.</sub></p>
 
@@ -37,7 +39,6 @@ Play against a computer controlled dealer, place a bet, and build a hand close t
 | 🔊 | Audio | Background audio and action sound effects |
 | 🖥️ | Desktop interface | Balance entry, main menu, Help, and About Us |
 
-
 ---
 
 # Quick Start
@@ -45,14 +46,15 @@ Play against a computer controlled dealer, place a bet, and build a hand close t
 - Install a JDK with `java` and `javac` available in your terminal.
 - Use a desktop environment with audio support.
 - Download or clone the repository and keep its image and sound folders intact.
-The source uses Java 8 language features and standard-library APIs. No external Java dependencies or database are required.
+The source uses Java 8 language features and standard library APIs. No external Java dependencies or database are required.
 From the repository root:
 ```sh
-cd OOP-Project-main
+cd blackjack_project
 java -version
 javac -version
 ```
-## 2. Fix the card-image path
+
+## 2. Fix the card image path
 In `src/Card.java`, replace the missing image reference:
 ```sh
 // Before
@@ -72,21 +74,24 @@ java -cp out Tester
 Skip `mkdir out` if the folder already exists. Run from main so relative asset paths resolve correctly.
 <details>
 <summary><strong>Using Visual Studio Code</strong></summary>
-1. Open `OOP-Project-main` as the workspace folder.
+1. Open `blackjack_project` as the workspace folder.
 2. Open the integrated terminal.
 3. Run the compile and launch commands above.
-4. If using an IDE launch configuration, use `Tester` as the main class and `OOP-Project-main` as the working directory.
+4. If using an IDE launch configuration, use `Tester` as the main class and `blackjack_project` as the working directory.
 </details>
 <details>
 <summary><strong>Troubleshooting</strong></summary>
 | Symptom | Check |
 |---|---|
 | `javac` is not recognized | Install a JDK and check its `bin` directory is on your terminal path. |
-| Images are missing | Launch from `OOP-Project-main` and apply the card-image correction above. |
+| Images are missing | Launch from `blackjack_project` and apply the card image correction above. |
 | Balance entry throws an error | Enter a positive whole number, such as `1000`. |
 | Audio throws an error | Check that the sound files exist and an audio device is available; audio error handling needs improvement. |
 **Validation:** Documentation was checked against the supplied source and asset paths. Compilation and interactive gameplay were not verified in the review environment because `javac` was unavailable.
 </details>
+
+---
+
 # How to Play
 | Step | Action |
 |---|---|
@@ -106,7 +111,7 @@ Skip `mkdir out` if the folder already exists. Run from main so relative asset p
 | Player standing | Allowed at 15 or higher |
 | Dealer drawing | Draws at 14 or lower |
 | Opening Blackjack | Checks for an initial total of 21 |
-| Five-card condition | Checks for five cards totaling 21 or less; see edge-case issue below |
+| Five cards condition | Checks for five cards totaling 21 or less; see edge-case issue below |
 | Tie | Equal totals or both hands over 21 in the Stand handler |
 | Balance settlement | One bet gained/lost; unchanged on a tie; no special 3:2 payout |
 Balances and scores last for the current session only. The opening screen collects a balance and does not provide account authentication.
@@ -115,6 +120,9 @@ Balances and scores last for the current session only. The opening screen collec
 <summary><strong>Screenshot: starting-balance screen</strong></summary>
 ![Starting-balance entry screen](images/img.png)
 </details>
+
+---
+
 # Architecture
 | Class | Responsibility |
 |---|---|
@@ -137,14 +145,20 @@ Balances and scores last for the current session only. The opening screen collec
 | Singleton-style access | `Tester.getInstance()` returns a shared instance |
 Several classes share static state. Further separation of game logic from the UI would improve testability.
 </details>
+
+---
+
 # Project Files
 | Path | Contents |
 |---|---|
 | `src/` | Seven Java source files |
 | `images/` | Card graphics, interface assets, and screenshots |
 | `sounds/` | Music and sound effects |
+
+---
+
 # Known Issues
-**Educational prototype:** apply the image-path correction before running. Gameplay edge cases and UI threading also need improvement.
+**Educational prototype:** apply the image path correction before running. Gameplay edge cases and UI threading also need improvement.
 <details>
 <summary><strong>View source-review findings</strong></summary>
 | Area | Finding |
@@ -160,12 +174,18 @@ Several classes share static state. Further separation of game logic from the UI
 | Resources | Images reload during painting; audio initialization failures can leave a null clip. |
 | Tests | No automated test suite or build-tool configuration is included. |
 </details>
+
+---
+
 # Roadmap
 - [ ] Correct asset references and round-ending edge cases.
 - [ ] Validate balances and bets; enforce one active round.
 - [ ] Separate game rules from Swing components.
 - [ ] Replace busy loops with event-driven updates.
 - [ ] Add scoring and round-resolution tests.
+
+---
+
 # Team
 | Contributor | Student ID |
 |---|---|
@@ -176,5 +196,7 @@ Contributing
 Open an issue or submit a focused pull request. Include reproduction steps, Java version, operating system, and how you checked your change.
 License
 The supplied repository has no `LICENSE` file, although its original README mentioned MIT. Maintainers should confirm the license and document image and audio permissions.
+
 ---
+
 <p align="center"><a href="#blackjack">Back to top ↑</a></p>
