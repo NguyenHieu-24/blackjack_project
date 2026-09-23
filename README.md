@@ -73,10 +73,10 @@ java -cp out Tester
 Skip `mkdir out` if the folder already exists. Run from main so relative asset paths resolve correctly.
 <details>
 <summary><strong>Using Visual Studio Code</strong></summary>
-1. Open `blackjack_project` as the workspace folder.
-2. Open the integrated terminal.
-3. Run the compile and launch commands above.
-4. If using an IDE launch configuration, use `Tester` as the main class and `blackjack_project` as the working directory.
+- 1. Open `blackjack_project` as the workspace folder.
+- 2. Open the integrated terminal.
+- 3. Run the compile and launch commands above.
+- 4. If using an IDE launch configuration, use `Tester` as the main class and `blackjack_project` as the working directory.
 </details>
 <details>
 <summary><strong>Troubleshooting</strong></summary>
