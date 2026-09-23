@@ -18,10 +18,17 @@
 ---
 ![Blackjack table with balance, win counters, betting chip, and Hit / Stand controls](images/img_2.png)
 <p align="center"><sub>Game table screenshot included in the repository. See known issues for current source limitations.</sub></p>
+
+---
+
 # Overview
 Play against a computer controlled dealer, place a bet, and build a hand close to 21. Developed for the Object-Oriented Programming course at International University, VNU-HCM, this project demonstrates Java classes, composition, inheritance, and event driven desktop interfaces.
 > **Game variant:** This implementation uses custom Xì Dách rules, including a minimum standing total of 15 and a five card condition.
+
+---
+
 # Features
+```text
 | | Feature | Implementation |
 |:---:|---|---|
 | 🃏 | Card system | Shuffled 52-card deck and adjustable Ace values |
@@ -30,6 +37,10 @@ Play against a computer controlled dealer, place a bet, and build a hand close t
 | 📊 | Session tracking | Balance and player/dealer win counters |
 | 🔊 | Audio | Background audio and action sound effects |
 | 🖥️ | Desktop interface | Balance entry, main menu, Help, and About Us |
+```
+
+---
+
 # Quick Start
 ## 1. Prepare your environment
 - Install a JDK with `java` and `javac` available in your terminal.
